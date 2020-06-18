@@ -1,4 +1,4 @@
-public class Index{
+public class AoC1P2 {
     public static void main(String []args){
         int fin = 0;
 
@@ -105,10 +105,18 @@ public class Index{
 
 
 
-            for(int i = 0; i < bruh.length; i++){
-                int x = (bruh[i] / 3) - 2;
+        for(int i = 0; i < bruh.length; i++){
+            int x = (bruh[i] / 3) - 2;
+            fin = fin + x;
+            while(x > 1){
+                x = (x/3) - 2;
+                if(x <= 0){
+                    x = 0 ;
+                }
                 fin = fin + x;
+            //    System.out.println(x);
             }
-            System.out.println(fin);
+        }
+        System.out.println(fin);
     }
 }
